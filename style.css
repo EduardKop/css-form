@@ -75,5 +75,5 @@ font-family: 'Open Sans', sans-serif;
   margin-top:25px;
 }
 .myMsg p{
-  position:fixed
+  overflow: hidden;
 }

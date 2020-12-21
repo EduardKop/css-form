@@ -2,21 +2,22 @@ let inpt = document.querySelector('.input');
 let btn = document.getElementById('mainButton');
 let mesengerForm = document.querySelector('.main');
 let messegesDiv = document.querySelector('.myMsg');
+let messegesDivElement = messegesDiv.getElementsByTagName('p');
+
 
 btn.style.display = "none";
 inpt.style.width = 460 + "px";
+let i = 0;
 
 function send() {
   var elem = document.createElement("p");
-  var br = document.createElement("br");
   elem.innerHTML = inpt.value;
   messegesDiv.append(elem);
-  messegesDiv.append(br);
-  // btn.style.display = "none";
-  // inpt.style.width = 460 + "px";
   inpt.value = '';
-  console.log(inpt.value)
-  
+  if (messegesDivElement.length > 4) {
+    messegesDivElement[i].style.display = "none";
+    i++;
+  }
 }
 
 inpt.addEventListener('keydown', function (e) {
@@ -25,6 +26,8 @@ inpt.addEventListener('keydown', function (e) {
     btn.addEventListener("click", send());
   }
 });
+
+
 
 // function showCount() {
 //   if (inpt.value != '') {
