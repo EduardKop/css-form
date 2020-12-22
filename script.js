@@ -28,7 +28,6 @@ inpt.addEventListener('keydown', function (e) {
 });
 
 
-
 // function showCount() {
 //   if (inpt.value != '') {
 //     // btn.style.display = "block";
